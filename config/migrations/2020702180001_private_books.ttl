@@ -1,0 +1,39 @@
+@prefix schema:  <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/book/gp1> a schema:Book ;
+    dcterms:title "Twilight" ;
+    dcterms:creator "Stephenie Meyer" ;
+    dcterms:issued "2005-10-05"^^xsd:date ;
+    schema:genre "Young adult fiction, Paranormal romance" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q104608> , <urn:isbn:9780316015844> .
+
+<http://example.org/book/gp2> a schema:Book ;
+    dcterms:title "Fifty Shades of Grey" ;
+    dcterms:creator "E. L. James" ;
+    dcterms:issued "2011-05-25"^^xsd:date ;
+    schema:genre "Erotic romance" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q240717> , <urn:isbn:9780345803481> .
+
+<http://example.org/book/gp3> a schema:Book ;
+    dcterms:title "The Da Vinci Code" ;
+    dcterms:creator "Dan Brown" ;
+    dcterms:issued "2003-03-18"^^xsd:date ;
+    schema:genre "Mystery, Thriller" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q183051> , <urn:isbn:9780385504201> .
+
+<http://example.org/book/gp4> a schema:Book ;
+    dcterms:title "Confessions of a Shopaholic" ;
+    dcterms:creator "Sophie Kinsella" ;
+    dcterms:issued "2000-09-01"^^xsd:date ;
+    schema:genre "Chick lit, Comedy" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q5162838> , <urn:isbn:9780385335485> .
+
+<http://example.org/book/gp5> a schema:Book ;
+    dcterms:title "The Notebook" ;
+    dcterms:creator "Nicholas Sparks" ;
+    dcterms:issued "1996-10-01"^^xsd:date ;
+    schema:genre "Romance" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1139973> , <urn:isbn:9780446605236> .

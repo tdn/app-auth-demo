@@ -1,7 +1,40 @@
 {
   "version": "0.1",
   "prefixes": {
+    "schema": "http://schema.org/"
   },
   "resources": {
+    "books": {
+      "name": "book",
+      "class": "schema:Book",
+      "attributes": {
+        "title": {
+          "type": "string",
+          "predicate": "schema:headline"
+        },
+        "isbn": {
+          "type": "string",
+          "predicate": "schema:isbn"
+        },
+        "publication-date": {
+          "type": "date",
+          "predicate": "schema:datePublished"
+        },
+        "genre": {
+          "type": "string",
+          "predicate": "schema:genre"
+        },
+        "language": {
+          "type": "string",
+          "predicate": "schema:inLanguage"
+        },
+        "number-of-pages": {
+          "type": "integer",
+          "predicate": "schema:numberOfPages"
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://example.com/books/"
+    }
   }
 }

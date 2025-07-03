@@ -37,6 +37,10 @@
   :mu "http://mu.semte.ch/vocabularies/core/"
   :session "http://mu.semte.ch/vocabularies/session/"
   :ext "http://mu.semte.ch/vocabularies/ext/"
+  :schema "http://schema.org/"
+  :rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  :dct "http://purl.org/dc/terms/"
+  :owl "http://www.w3.org/2002/07/owl#"
   ;; Custom prefix URIs here, prefix casing is ignored
   )
 
@@ -55,32 +59,51 @@
             ; of the arrow
 
 ;; Example:
-;; (define-graph company ("http://mu.semte.ch/graphs/companies/")
-;;   ("foaf:OnlineAccount"
-;;    -> "foaf:accountName"
-;;    -> "foaf:accountServiceHomepage")
-;;   ("foaf:Group"
-;;    -> "foaf:name"
-;;    -> "foaf:member"))
+(define-graph privatebooks ("http://mu.semte.ch/graphs/privatebooks/")
+  ("schema:Book"
+   -> "schema:genre"
+   -> "dct:creator"
+   -> "dct:issued"
+   -> "owl:sameAs"))
 
-
+(define-graph favorites ("http://mu.semte.ch/graphs/favorites/")
+  ("ext:Favorite"
+   -> "ext:book"
+   -> "rdf:type"
+   -> "mu:uuid"))
 ;;;;;;;;;;;;;
 ;; User roles
 
 (supply-allowed-group "public")
 
-(grant (read write)
+(grant (read)
        :to-graph public
        :for-allowed-group "public")
 
-;; example:
+(supply-allowed-group "privatebooks"
+  :query "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+  PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+          SELECT DISTINCT ?uuid WHERE {
+            <SESSION_ID> ext:belongsToCompany/mu:uuid ?uuid
+          }"
+  :parameters ("uuid"))
 
-;; (supply-allowed-group "company"
-;;   :query "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
-;;           SELECT DISTINCT ?uuid WHERE {
-;;             <SESSION_ID ext:belongsToCompany/mu:uuid ?uuid
-;;           }"
-;;   :parameters ("uuid"))
+(grant (read)
+        :to-graph privatebooks
+        :for-allowed-group "privatebooks")
+
+
+(supply-allowed-group "favorites"
+  :query "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+  PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+          SELECT DISTINCT ?uuid WHERE {
+            <SESSION_ID> ext:belongsToCompany/mu:uuid ?uuid
+          }"
+  :parameters ("uuid"))
+
+(grant (read write)
+        :to-graph favorites
+        :for-allowed-group "favorites")
 
 ;; (grant (read write)
 ;;        :to company
