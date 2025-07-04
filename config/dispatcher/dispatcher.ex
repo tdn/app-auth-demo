@@ -19,6 +19,10 @@ defmodule Dispatcher do
     forward conn, path, "http://login/sessions/"
   end
 
+  match "/mock/sessions/*path" do
+    forward conn, path, "http://login/sessions/"
+  end
+
   match "/accounts/*path", @json do
     Proxy.forward conn, path, "http://resource/accounts/"
   end
