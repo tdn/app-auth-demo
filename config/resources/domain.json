@@ -1,7 +1,8 @@
 {
   "version": "0.1",
   "prefixes": {
-    "schema": "http://schema.org/"
+    "schema": "http://schema.org/",
+    "dct": "http://purl.org/dc/terms/"
   },
   "resources": {
     "books": {
@@ -10,7 +11,7 @@
       "attributes": {
         "title": {
           "type": "string",
-          "predicate": "schema:headline"
+          "predicate": "dct:title"
         },
         "isbn": {
           "type": "string",
@@ -18,7 +19,7 @@
         },
         "publication-date": {
           "type": "date",
-          "predicate": "schema:datePublished"
+          "predicate": "dct:issued"
         },
         "genre": {
           "type": "string",
