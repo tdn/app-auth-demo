@@ -4,140 +4,140 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/book/1> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/1> a schema:Book ;
     dcterms:title "To Kill a Mockingbird" ;
     dcterms:creator "Harper Lee" ;
     dcterms:issued "1960-07-11"^^xsd:date ;
     schema:genre "Southern Gothic, Bildungsroman" ;
     owl:sameAs <http://www.wikidata.org/entity/Q212340> , <urn:isbn:9780060935467> .
 
-<http://example.org/book/2> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/2> a schema:Book ;
     dcterms:title "1984" ;
     dcterms:creator "George Orwell" ;
     dcterms:issued "1949-06-08"^^xsd:date ;
     schema:genre "Dystopian, Political fiction, Social science fiction" ;
     owl:sameAs <http://www.wikidata.org/entity/Q975> , <urn:isbn:9780451524935> .
 
-<http://example.org/book/3> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/3> a schema:Book ;
     dcterms:title "Pride and Prejudice" ;
     dcterms:creator "Jane Austen" ;
     dcterms:issued "1813-01-28"^^xsd:date ;
     schema:genre "Classic romance, Satire" ;
     owl:sameAs <http://www.wikidata.org/entity/Q146> , <urn:isbn:9780141439518> .
 
-<http://example.org/book/4> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/4> a schema:Book ;
     dcterms:title "The Great Gatsby" ;
     dcterms:creator "F. Scott Fitzgerald" ;
     dcterms:issued "1925-04-10"^^xsd:date ;
     schema:genre "Tragedy" ;
     owl:sameAs <http://www.wikidata.org/entity/Q43275> , <urn:isbn:9780743273565> .
 
-<http://example.org/book/5> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/5> a schema:Book ;
     dcterms:title "Moby‑Dick" ;
     dcterms:creator "Herman Melville" ;
     dcterms:issued "1851-10-18"^^xsd:date ;
     schema:genre "Adventure fiction, Epic, Sea story" ;
     owl:sameAs <http://www.wikidata.org/entity/Q37176> , <urn:isbn:9780142437247> .
 
-<http://example.org/book/6> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/6> a schema:Book ;
     dcterms:title "War and Peace" ;
     dcterms:creator "Leo Tolstoy" ;
     dcterms:issued "1869-01-01"^^xsd:date ;
     schema:genre "Historical novel" ;
     owl:sameAs <http://www.wikidata.org/entity/Q8207> , <urn:isbn:9780199232765> .
 
-<http://example.org/book/7> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/7> a schema:Book ;
     dcterms:title "The Catcher in the Rye" ;
     dcterms:creator "J.D. Salinger" ;
     dcterms:issued "1951-07-16"^^xsd:date ;
     schema:genre "Literary realism" ;
     owl:sameAs <http://www.wikidata.org/entity/Q41476> , <urn:isbn:9780316769488> .
 
-<http://example.org/book/8> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/8> a schema:Book ;
     dcterms:title "The Hobbit" ;
     dcterms:creator "J.R.R. Tolkien" ;
     dcterms:issued "1937-09-21"^^xsd:date ;
     schema:genre "Fantasy" ;
     owl:sameAs <http://www.wikidata.org/entity/Q219069> , <urn:isbn:9780345339683> .
 
-<http://example.org/book/9> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/9> a schema:Book ;
     dcterms:title "Crime and Punishment" ;
     dcterms:creator "Fyodor Dostoevsky" ;
     dcterms:issued "1866-01-01"^^xsd:date ;
     schema:genre "Psychological novel" ;
     owl:sameAs <http://www.wikidata.org/entity/Q220263> , <urn:isbn:9780140449136> .
 
-<http://example.org/book/10> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/10> a schema:Book ;
     dcterms:title "The Brothers Karamazov" ;
     dcterms:creator "Fyodor Dostoevsky" ;
     dcterms:issued "1880-01-01"^^xsd:date ;
     schema:genre "Philosophical novel" ;
     owl:sameAs <http://www.wikidata.org/entity/Q43407> , <urn:isbn:9780374528379> .
 
-<http://example.org/book/11> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/11> a schema:Book ;
     dcterms:title "Brave New World" ;
     dcterms:creator "Aldous Huxley" ;
     dcterms:issued "1932-08-01"^^xsd:date ;
     schema:genre "Dystopian, Science fiction" ;
     owl:sameAs <http://www.wikidata.org/entity/Q16616> , <urn:isbn:9780060850524> .
 
-<http://example.org/book/12> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/12> a schema:Book ;
     dcterms:title "Jane Eyre" ;
     dcterms:creator "Charlotte Brontë" ;
     dcterms:issued "1847-10-16"^^xsd:date ;
     schema:genre "Gothic, Bildungsroman" ;
     owl:sameAs <http://www.wikidata.org/entity/Q183962> , <urn:isbn:9780142437209> .
 
-<http://example.org/book/13> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/13> a schema:Book ;
     dcterms:title "Wuthering Heights" ;
     dcterms:creator "Emily Brontë" ;
     dcterms:issued "1847-12-01"^^xsd:date ;
     schema:genre "Gothic fiction" ;
     owl:sameAs <http://www.wikidata.org/entity/Q34669> , <urn:isbn:9780141439556> .
 
-<http://example.org/book/14> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/14> a schema:Book ;
     dcterms:title "The Lord of the Rings" ;
     dcterms:creator "J.R.R. Tolkien" ;
     dcterms:issued "1954-07-29"^^xsd:date ;
     schema:genre "Fantasy" ;
     owl:sameAs <http://www.wikidata.org/entity/Q9144> , <urn:isbn:9780618640157> .
 
-<http://example.org/book/15> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/15> a schema:Book ;
     dcterms:title "Frankenstein" ;
     dcterms:creator "Mary Shelley" ;
     dcterms:issued "1818-01-01"^^xsd:date ;
     schema:genre "Gothic fiction" ;
     owl:sameAs <http://www.wikidata.org/entity/Q5121> , <urn:isbn:9780141439471> .
 
-<http://example.org/book/16> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/16> a schema:Book ;
     dcterms:title "Dracula" ;
     dcterms:creator "Bram Stoker" ;
     dcterms:issued "1897-05-26"^^xsd:date ;
     schema:genre "Gothic horror" ;
     owl:sameAs <http://www.wikidata.org/entity/Q4583> , <urn:isbn:9780141439846> .
 
-<http://example.org/book/17> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/17> a schema:Book ;
     dcterms:title "The Picture of Dorian Gray" ;
     dcterms:creator "Oscar Wilde" ;
     dcterms:issued "1890-06-20"^^xsd:date ;
     schema:genre "Philosophical fiction" ;
     owl:sameAs <http://www.wikidata.org/entity/Q173293> , <urn:isbn:9780141439570> .
 
-<http://example.org/book/18> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/18> a schema:Book ;
     dcterms:title "The Odyssey" ;
     dcterms:creator "Homer" ;
     dcterms:issued "0008-01-01"^^xsd:date ;
     schema:genre "Epic poetry" ;
     owl:sameAs <http://www.wikidata.org/entity/Q462> , <urn:isbn:9780140268867> .
 
-<http://example.org/book/19> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/19> a schema:Book ;
     dcterms:title "Don Quixote" ;
     dcterms:creator "Miguel de Cervantes" ;
     dcterms:issued "1605-01-16"^^xsd:date ;
     schema:genre "Picaresque novel" ;
     owl:sameAs <http://www.wikidata.org/entity/Q1868> , <urn:isbn:9780060934347> .
 
-<http://example.org/book/20> a schema:Book ;
+<https://authorization-demo.redpencil.io/books/20> a schema:Book ;
     dcterms:title "The Divine Comedy" ;
     dcterms:creator "Dante Alighieri" ;
     dcterms:issued "1320-01-01"^^xsd:date ;

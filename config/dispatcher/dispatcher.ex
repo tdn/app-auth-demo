@@ -13,6 +13,13 @@ defmodule Dispatcher do
   define_layers [ :static, :sparql, :services, :fall_back, :not_found ]
 
   ###############
+  # Mock login
+  ###############
+  match "/sessions/*path" do
+    Proxy.forward conn, path, "http://login/sessions/"
+  end
+
+  ###############
   # SPARQL
   ###############
   get "/sparql", %{ layer: :sparql, accept: %{ html: true } } do
