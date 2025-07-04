@@ -22,5 +22,24 @@
 ;;   :resource-base (s-url "http://webcat.tmp.semte.ch/datasets/")
 ;;   :on-path "datasets")
 
+(define-resource user ()
+  :class (s-prefix "foaf:Person")
+  :resource-base (s-url "https://auth-demo.redpencil.io/users/")
+  :properties `((:first-name :string ,(s-prefix "foaf:firstName"))
+                (:last-name :string ,(s-prefix "foaf:familyName")))
+  :has-many `((account :via ,(s-prefix "foaf:account")
+                       :as "account"))
+  :on-path "users")
+
+(define-resource account ()
+  :class (s-prefix "foaf:OnlineAccount")
+  :resource-base (s-url "https://auth-demo.redpencil.io/accounts/")
+  :properties `((:provider :via ,(s-prefix "foaf:accountServiceHomepage"))
+                (:roles :string-set ,(s-prefix "ext:sessionRole")))
+  :has-one `((user :via ,(s-prefix "foaf:account")
+                   :inverse t
+                   :as "user"))
+  :on-path "accounts")
+
 ;; reading in the domain.json
 (read-domain-file "domain.json")

@@ -16,8 +16,17 @@ defmodule Dispatcher do
   # Mock login
   ###############
   match "/sessions/*path" do
-    Proxy.forward conn, path, "http://login/sessions/"
+    forward conn, path, "http://login/sessions/"
   end
+
+  match "/accounts/*path", @json do
+    Proxy.forward conn, path, "http://resource/accounts/"
+  end
+
+  match "/users/*path", @json do
+    Proxy.forward conn, path, "http://resource/users/"
+  end
+
 
   ###############
   # SPARQL
