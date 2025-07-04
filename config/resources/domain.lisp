@@ -1,5 +1,6 @@
 (in-package :mu-cl-resources)
 
+(setf *default-page-size* 100)
 (setf *include-count-in-paginated-responses* t)
 (setf *supply-cache-headers-p* t)
 (setf sparql:*experimental-no-application-graph-for-sudo-select-queries* t)
