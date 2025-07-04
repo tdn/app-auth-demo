@@ -42,6 +42,9 @@
   :dct "http://purl.org/dc/terms/"
   :owl "http://www.w3.org/2002/07/owl#"
   ;; Custom prefix URIs here, prefix casing is ignored
+  :foaf "http://xmlns.com/foaf/0.1/"
+  :org "http://www.w3.org/ns/org#"
+  :skos "http://www.w3.org/2004/02/skos/core#"
   )
 
 
@@ -71,13 +74,34 @@
    -> "ext:book"
    -> "rdf:type"
    -> "mu:uuid"))
+
+(define-graph system ("http://mu.semte.ch/graphs/system")
+  ("foaf:Person"
+   -> "mu:uuid"
+   -> "foaf:firstName"
+   -> "foaf:familyName"
+   -> "foaf:account")
+  ("foaf:OnlineAccount"
+   -> "mu:uuid"
+   -> "foaf:accountServiceHomepage"
+   -> "foaf:accountName")
+  ("org:Membership"
+   -> "mu:uuid"
+   -> "org:member"
+   -> "org:role")
+  ("org:Role"
+   -> "mu:uuid"
+   -> "skos:prefLabel"
+   -> "skos:notation"
+   -> "skos:definition"))
+
 ;;;;;;;;;;;;;
 ;; User roles
 
 (supply-allowed-group "public")
 
 (grant (read)
-       :to-graph public
+       :to-graph (public system)
        :for-allowed-group "public")
 
 (supply-allowed-group "privatebooks"
