@@ -1,0 +1,51 @@
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+
+<https://authorization-demo.redpencil.io/user/136c3c34-6e01-4d40-9b50-7b6d45bb4d14> a foaf:Person ;
+    mu:uuid "136c3c34-6e01-4d40-9b50-7b6d45bb4d14" ;
+    foaf:firstName "Private Book Access" ;
+    foaf:familyName "User" ;
+    foaf:account <https://authorization-demo.redpencil.io/accounts/b3e19466-5ab6-4e89-a09e-ec7f69b65e7a> .
+
+<https://authorization-demo.redpencil.io/accounts/b3e19466-5ab6-4e89-a09e-ec7f69b65e7a> a foaf:OnlineAccount ;
+    mu:uuid "b3e19466-5ab6-4e89-a09e-ec7f69b65e7a" ;
+    foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service> ;
+    foaf:accountName "private-book-access-user" .
+
+
+<https://authorization-demo.redpencil.io/memberships/4d569c29-ed9d-4f2d-8b98-ad13dde615ca> a org:Membership ;
+    mu:uuid "4d569c29-ed9d-4f2d-8b98-ad13dde615ca" ;
+    org:member <https://authorization-demo.redpencil.io/user/136c3c34-6e01-4d40-9b50-7b6d45bb4d14> ;
+    org:role <https://authorization-demo.redpencil.io/roles/32c2b6c3-4c99-462c-a145-083003eb95b5> .
+
+
+<https://authorization-demo.redpencil.io/roles/32c2b6c3-4c99-462c-a145-083003eb95b5> a org:Role ;
+    mu:uuid "32c2b6c3-4c99-462c-a145-083003eb95b5" ;
+    skos:prefLabel "Private Book Access User" ;
+    skos:notation "Private_Book_Access_User" ;
+    skos:definition "Reader that can access private books" .
+
+<https://authorization-demo.redpencil.io/user/b7873f46-12ac-4fa8-b5d8-48b03fedb389> a foaf:Person ;
+    mu:uuid "b7873f46-12ac-4fa8-b5d8-48b03fedb389" ;
+    foaf:firstName "Favorite Storing" ;
+    foaf:familyName "User" ;
+    foaf:account <https://authorization-demo.redpencil.io/accounts/7c1d567f-06ee-42df-818b-05b36c02e4d4> .
+
+<https://authorization-demo.redpencil.io/accounts/7c1d567f-06ee-42df-818b-05b36c02e4d4> a foaf:OnlineAccount ;
+    mu:uuid "7c1d567f-06ee-42df-818b-05b36c02e4d4" ;
+    foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service> ;
+    foaf:accountName "favorite-storing-user" .
+
+
+<https://authorization-demo.redpencil.io/memberships/140eda05-1f76-4094-a920-a2d8925f5bab> a org:Membership ;
+    mu:uuid "140eda05-1f76-4094-a920-a2d8925f5bab" ;
+    org:member <https://authorization-demo.redpencil.io/user/b7873f46-12ac-4fa8-b5d8-48b03fedb389> ;
+    org:role <https://authorization-demo.redpencil.io/roles/9137745a-0bf3-4277-b522-80900b0af19f> .
+
+
+<https://authorization-demo.redpencil.io/roles/9137745a-0bf3-4277-b522-80900b0af19f> a org:Role ;
+    mu:uuid "9137745a-0bf3-4277-b522-80900b0af19f" ;
+    skos:prefLabel "Favorite Storing User" ;
+    skos:notation "Favorite_Storing_User" ;
+    skos:definition "Reader that can store favorites" .
