@@ -7,19 +7,42 @@ defmodule Dispatcher do
   ]
 
   @any %{}
-  @json %{ accept: %{ json: true } }
+  @json %{ accept: %{ json: true }, layer: :services }
   @html %{ accept: %{ html: true } }
 
-  define_layers [ :static, :sparql, :services, :fall_back, :not_found ]
+  define_layers [ :static, :frontend_html, :sparql, :services, :fall_back, :not_found ]
+
+  ###############
+  # Frontend
+  ###############
+  match "/.well-known/*path", _ do
+    send_resp( conn, 200, "{ \"message\": \"ok\"}" )
+  end
+
+  get "/favicon.ico/*path", _ do
+    send_resp( conn, 404, "No icon specified" )
+  end
+
+  get "/assets/*path", %{ layer: :static } do
+    Proxy.forward conn, path, "http://frontend/assets/"
+  end
+
+  get "/*_", %{ accept: [:html], layer: :frontend_html } do
+    Proxy.forward conn, [], "http://frontend/index.html"
+  end
+
+  head "/*_", %{ accept: [:html], layer: :frontend_html } do
+    Proxy.forward conn, [], "http://frontend/index.html"
+  end
 
   ###############
   # Mock login
   ###############
-  match "/sessions/*path" do
+  match "/sessions/*path", @json do
     forward conn, path, "http://login/sessions/"
   end
 
-  match "/mock/sessions/*path" do
+  match "/mock/sessions/*path", @json do
     forward conn, path, "http://login/sessions/"
   end
 
@@ -35,10 +58,6 @@ defmodule Dispatcher do
   ###############
   # SPARQL
   ###############
-  get "/sparql", %{ layer: :sparql, accept: %{ html: true } } do
-    forward conn, [], "http://frontend/sparql"
-  end
-
   match "/sparql", %{ layer: :sparql, accept: %{ sparql: true } } do
     forward conn, [], "http://database:8890/sparql"
   end

@@ -23,6 +23,12 @@ services:
     logging: *default-logging
 
   # Your extra services here
+  frontend:
+    image: redpencil/frontend-auth-demo
+    labels:
+      - "logging=true"
+    logging: *default-logging
+
   resource:
     image: semtech/mu-cl-resources:1.26.0
     volumes:
