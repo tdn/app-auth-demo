@@ -42,11 +42,11 @@ defmodule Dispatcher do
     forward conn, path, "http://login/sessions/"
   end
 
-  post  "/mock/sessions/*path", @json do
+  get "/mock/sessions/*path" do
     forward conn, path, "http://login/sessions/"
   end
 
-  get "/mock/sessions/*path" do
+  match  "/mock/sessions/*path", @json do
     forward conn, path, "http://login/sessions/"
   end
 
