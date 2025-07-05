@@ -42,7 +42,8 @@ defmodule Dispatcher do
     forward conn, path, "http://login/sessions/"
   end
 
-  match "/mock/sessions/*path", @json do
+  match "/mock/sessions/*path" do
+    IO.puts "Hey, ik ben hier"
     forward conn, path, "http://login/sessions/"
   end
 
