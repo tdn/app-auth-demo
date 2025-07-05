@@ -69,7 +69,7 @@
    -> "dct:issued"
    -> "owl:sameAs"))
 
-(define-graph favorites ("http://mu.semte.ch/graphs/favorites/")
+(define-graph favorites ("http://mu.semte.ch/graphs/favorites")
   ("ext:Favorite"
    -> "ext:book"
    -> "rdf:type"
