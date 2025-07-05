@@ -45,6 +45,10 @@
   :foaf "http://xmlns.com/foaf/0.1/"
   :org "http://www.w3.org/ns/org#"
   :skos "http://www.w3.org/2004/02/skos/core#"
+  :nfo "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+  :dbpedia "http://dbpedia.org/resource/"
+  :nie "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+  :service "http://services.semantic.works/"
   )
 
 
@@ -93,13 +97,26 @@
    -> "skos:notation"
    -> "skos:definition"))
 
+(define-graph qr-codes ("http://mu.semte.ch/graphs/qr-codes")
+  ("nfo:FileDataObject"
+   -> "mu:uuid"
+   -> "rdf:type"
+   -> "nfo:fileName"
+   -> "dct:format"
+   -> "nfo:fileSize"
+   -> "dbpedia:fileExtension"
+   -> "dct:created"
+   -> "nie:dataSource"
+   -> "schema:embeddedTextCaption"
+   <- "ext:qrCode"))
+
 ;;;;;;;;;;;;;
 ;; User roles
 
 (supply-allowed-group "public")
 
 (grant (read)
-       :to-graph (public system)
+       :to-graph (public system qr-codes)
        :for-allowed-group "public")
 
 (supply-allowed-group "privatebooks"
@@ -126,6 +143,14 @@ PREFIX session: <http://mu.semte.ch/vocabularies/session/>
 (grant (read write)
        :to-graph favorites
        :for-allowed-group "favorites")
+
+(with-scope "service:qrencode"
+  (grant (read write)
+         :to-graph qr-codes
+         :for-allowed-group "public")
+  (grant (read)
+         :to-graph favorites
+         :for-allowed-group "public"))
 
 ;; (grant (read write)
 ;;        :to company

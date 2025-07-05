@@ -2,7 +2,10 @@
   "version": "0.1",
   "prefixes": {
     "schema": "http://schema.org/",
-    "dct": "http://purl.org/dc/terms/"
+    "dct": "http://purl.org/dc/terms/",
+    "nfo": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#",
+    "nie": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#",
+    "dbpedia": "http://dbpedia.org/resource/"
   },
   "resources": {
     "books": {
@@ -34,8 +37,51 @@
           "predicate": "schema:numberOfPages"
         }
       },
+      "relationships": {
+        "qr-code": {
+          "predicate": "ext:qrCode",
+          "target": "file",
+          "cardinality": "one"
+        }
+      },
       "features": ["include-uri"],
       "new-resource-base": "http://example.com/books/"
+    },
+    "files": {
+      "name": "file",
+      "class": "nfo:FileDataObject",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "predicate": "nfo:fileName"
+        },
+        "format": {
+          "type": "string",
+          "predicate": "dct:format"
+        },
+        "size": {
+          "type": "integer",
+          "predicate": "nfo:fileSize"
+        },
+        "extension": {
+          "type": "string",
+          "predicate": "dbpedia:fileExtension"
+        },
+        "created": {
+          "type": "datetime",
+          "predicate": "dct:created"
+        }
+      },
+      "relationships": {
+        "download": {
+          "predicate": "nie:dataSource",
+          "target": "file",
+          "cardinality": "one",
+          "inverse": true
+        },
+      },
+      "new-resource-base": "http://data.example.com/files/",
+      "features": ["include-uri"]
     }
   }
 }

@@ -37,6 +37,25 @@ services:
       - "logging=true"
     logging: *default-logging
 
+  file:
+    image: semtech/mu-file-service:3.4.0
+    volumes:
+      - ./data/files:/share
+    labels:
+      - "logging=true"
+    logging: *default-logging
+
+  qrencode:
+    image: madnificent/mu-qrencode
+    volumes:
+      - ./data/files/:/share/
+      - ./config/qrencode/delta.js:/config/delta.js
+    environment:
+      DEFAULT_MU_AUTH_SCOPE: "http://services.semantic.works/qrencode"
+    labels:
+      - "logging=true"
+    logging: *default-logging
+
   migrations:
     image: semtech/mu-migrations-service:0.9.0
     links:
@@ -80,3 +99,6 @@ services:
     image: lblod/mock-login-service:0.7.0
     environment:
       GROUP_TYPE: "http://www.w3.org/ns/org#Organization"
+    labels:
+      - "logging=true"
+    logging: *default-logging

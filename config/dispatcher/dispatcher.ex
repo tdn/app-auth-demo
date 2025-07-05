@@ -89,6 +89,14 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/books/"
   end
 
+  get "/files/:id/download", %{ layer: :static } do
+    forward conn, [], "http://file/files/" <> id <> "/download"
+  end
+
+  get "/files/*path", @json do
+    forward conn, path, "http://resource/files/"
+  end
+
   match "/*_", %{ layer: :not_found } do
     send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )
   end
