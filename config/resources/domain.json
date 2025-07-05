@@ -13,6 +13,10 @@
           "type": "string",
           "predicate": "dct:title"
         },
+        "author": {
+          "type": "string",
+          "predicate": "dct:creator"
+        },
         "isbn": {
           "type": "string",
           "predicate": "schema:isbn"
@@ -32,6 +36,10 @@
         "number-of-pages": {
           "type": "integer",
           "predicate": "schema:numberOfPages"
+        },
+        "links": {
+          "type": "string-set",
+          "predicate": "owl:sameAs"
         }
       },
       "features": ["include-uri"],

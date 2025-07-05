@@ -11,7 +11,8 @@
     dcterms:creator "Harper Lee" ;
     dcterms:issued "1960-07-11"^^xsd:date ;
     schema:genre "Southern Gothic, Bildungsroman" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q212340> , <urn:isbn:9780060935467> .
+    owl:sameAs <http://www.wikidata.org/entity/Q212340> ;
+    schema:isbn <urn:isbn:9780060935467> .
 
 <https://authorization-demo.redpencil.io/books/d46557a3-1b48-4031-9473-3ed37315cbc1> a schema:Book ;
     mu:uuid "d46557a3-1b48-4031-9473-3ed37315cbc1" ;
@@ -19,7 +20,8 @@
     dcterms:creator "George Orwell" ;
     dcterms:issued "1949-06-08"^^xsd:date ;
     schema:genre "Dystopian, Political fiction, Social science fiction" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q975> , <urn:isbn:9780451524935> .
+    owl:sameAs <http://www.wikidata.org/entity/Q975> ;
+    schema:isbn <urn:isbn:9780451524935> .
 
 <https://authorization-demo.redpencil.io/books/b193627f-2d77-40de-a20a-84cf3e514c76> a schema:Book ;
     mu:uuid "b193627f-2d77-40de-a20a-84cf3e514c76" ;
@@ -27,7 +29,8 @@
     dcterms:creator "Jane Austen" ;
     dcterms:issued "1813-01-28"^^xsd:date ;
     schema:genre "Classic romance, Satire" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q146> , <urn:isbn:9780141439518> .
+    owl:sameAs <http://www.wikidata.org/entity/Q146> ;
+    schema:isbn <urn:isbn:9780141439518> .
 
 <https://authorization-demo.redpencil.io/books/3d476f62-47ae-41b3-bc44-e3eb4982d336> a schema:Book ;
     mu:uuid "3d476f62-47ae-41b3-bc44-e3eb4982d336" ;
@@ -35,7 +38,8 @@
     dcterms:creator "F. Scott Fitzgerald" ;
     dcterms:issued "1925-04-10"^^xsd:date ;
     schema:genre "Tragedy" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q43275> , <urn:isbn:9780743273565> .
+    owl:sameAs <http://www.wikidata.org/entity/Q43275> ;
+    schema:isbn <urn:isbn:9780743273565> .
 
 <https://authorization-demo.redpencil.io/books/2ea21ef1-105e-476d-9c74-6dc15d6d28bd> a schema:Book ;
     mu:uuid "2ea21ef1-105e-476d-9c74-6dc15d6d28bd" ;
@@ -43,7 +47,8 @@
     dcterms:creator "Herman Melville" ;
     dcterms:issued "1851-10-18"^^xsd:date ;
     schema:genre "Adventure fiction, Epic, Sea story" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q37176> , <urn:isbn:9780142437247> .
+    owl:sameAs <http://www.wikidata.org/entity/Q37176> ;
+    schema:isbn <urn:isbn:9780142437247> .
 
 <https://authorization-demo.redpencil.io/books/0339749b-b887-4eb2-86f8-5e3151961b01> a schema:Book ;
     mu:uuid "0339749b-b887-4eb2-86f8-5e3151961b01" ;
@@ -51,7 +56,8 @@
     dcterms:creator "Leo Tolstoy" ;
     dcterms:issued "1869-01-01"^^xsd:date ;
     schema:genre "Historical novel" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q8207> , <urn:isbn:9780199232765> .
+    owl:sameAs <http://www.wikidata.org/entity/Q8207> ;
+    schema:isbn <urn:isbn:9780199232765> .
 
 <https://authorization-demo.redpencil.io/books/7e8a4eec-30e9-4255-bbba-c31090046787> a schema:Book ;
     mu:uuid "7e8a4eec-30e9-4255-bbba-c31090046787" ;
@@ -59,7 +65,8 @@
     dcterms:creator "J.D. Salinger" ;
     dcterms:issued "1951-07-16"^^xsd:date ;
     schema:genre "Literary realism" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q41476> , <urn:isbn:9780316769488> .
+    owl:sameAs <http://www.wikidata.org/entity/Q41476> ;
+    schema:isbn <urn:isbn:9780316769488> .
 
 <https://authorization-demo.redpencil.io/books/2c019c36-7a9c-4187-badb-e7f00735b5e9> a schema:Book ;
     mu:uuid "2c019c36-7a9c-4187-badb-e7f00735b5e9" ;
@@ -67,7 +74,8 @@
     dcterms:creator "J.R.R. Tolkien" ;
     dcterms:issued "1937-09-21"^^xsd:date ;
     schema:genre "Fantasy" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q219069> , <urn:isbn:9780345339683> .
+    owl:sameAs <http://www.wikidata.org/entity/Q219069> ;
+    schema:isbn <urn:isbn:9780345339683> .
 
 <https://authorization-demo.redpencil.io/books/780601f7-7030-41d6-97f9-9231619f420a> a schema:Book ;
     mu:uuid "780601f7-7030-41d6-97f9-9231619f420a" ;
@@ -75,7 +83,8 @@
     dcterms:creator "Fyodor Dostoevsky" ;
     dcterms:issued "1866-01-01"^^xsd:date ;
     schema:genre "Psychological novel" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q220263> , <urn:isbn:9780140449136> .
+    owl:sameAs <http://www.wikidata.org/entity/Q220263> ;
+    schema:isbn <urn:isbn:9780140449136> .
 
 <https://authorization-demo.redpencil.io/books/16130b87c-0052-43f0-986d-ec0b94e06aeb> a schema:Book ;
     mu:uuid "16130b87c-0052-43f0-986d-ec0b94e06aeb" ;
@@ -83,7 +92,8 @@
     dcterms:creator "Fyodor Dostoevsky" ;
     dcterms:issued "1880-01-01"^^xsd:date ;
     schema:genre "Philosophical novel" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q43407> , <urn:isbn:9780374528379> .
+    owl:sameAs <http://www.wikidata.org/entity/Q43407> ;
+    schema:isbn <urn:isbn:9780374528379> .
 
 <https://authorization-demo.redpencil.io/books/1f6823700-56fe-4764-a2a9-47c5b51a4f46> a schema:Book ;
     mu:uuid "1f6823700-56fe-4764-a2a9-47c5b51a4f46" ;
@@ -91,7 +101,8 @@
     dcterms:creator "Aldous Huxley" ;
     dcterms:issued "1932-08-01"^^xsd:date ;
     schema:genre "Dystopian, Science fiction" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q16616> , <urn:isbn:9780060850524> .
+    owl:sameAs <http://www.wikidata.org/entity/Q16616> ;
+    schema:isbn <urn:isbn:9780060850524> .
 
 <https://authorization-demo.redpencil.io/books/1a30bb742-e580-4425-9d74-20dc5a24e7cd> a schema:Book ;
     mu:uuid "1a30bb742-e580-4425-9d74-20dc5a24e7cd" ;
@@ -99,7 +110,8 @@
     dcterms:creator "Charlotte Brontë" ;
     dcterms:issued "1847-10-16"^^xsd:date ;
     schema:genre "Gothic, Bildungsroman" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q183962> , <urn:isbn:9780142437209> .
+    owl:sameAs <http://www.wikidata.org/entity/Q183962> ;
+    schema:isbn <urn:isbn:9780142437209> .
 
 <https://authorization-demo.redpencil.io/books/1c7f9436c-f45d-40a3-a788-ff20c760d1ac> a schema:Book ;
     mu:uuid "1c7f9436c-f45d-40a3-a788-ff20c760d1ac" ;
@@ -107,7 +119,8 @@
     dcterms:creator "Emily Brontë" ;
     dcterms:issued "1847-12-01"^^xsd:date ;
     schema:genre "Gothic fiction" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q34669> , <urn:isbn:9780141439556> .
+    owl:sameAs <http://www.wikidata.org/entity/Q34669> ;
+    schema:isbn <urn:isbn:9780141439556> .
 
 <https://authorization-demo.redpencil.io/books/13b480838-285d-438b-8835-93cb8373f51c> a schema:Book ;
     mu:uuid "13b480838-285d-438b-8835-93cb8373f51c" ;
@@ -115,7 +128,8 @@
     dcterms:creator "J.R.R. Tolkien" ;
     dcterms:issued "1954-07-29"^^xsd:date ;
     schema:genre "Fantasy" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q9144> , <urn:isbn:9780618640157> .
+    owl:sameAs <http://www.wikidata.org/entity/Q9144> ;
+    schema:isbn <urn:isbn:9780618640157> .
 
 <https://authorization-demo.redpencil.io/books/1fafcfb73-e2cb-4f3f-a0d3-0ac5e0070042> a schema:Book ;
     mu:uuid "1fafcfb73-e2cb-4f3f-a0d3-0ac5e0070042" ;
@@ -123,7 +137,8 @@
     dcterms:creator "Mary Shelley" ;
     dcterms:issued "1818-01-01"^^xsd:date ;
     schema:genre "Gothic fiction" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q5121> , <urn:isbn:9780141439471> .
+    owl:sameAs <http://www.wikidata.org/entity/Q5121> ;
+    schema:isbn <urn:isbn:9780141439471> .
 
 <https://authorization-demo.redpencil.io/books/16cc613eb-d436-484d-8284-6d76008ff7df> a schema:Book ;
     mu:uuid "16cc613eb-d436-484d-8284-6d76008ff7df" ;
@@ -131,7 +146,8 @@
     dcterms:creator "Bram Stoker" ;
     dcterms:issued "1897-05-26"^^xsd:date ;
     schema:genre "Gothic horror" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q4583> , <urn:isbn:9780141439846> .
+    owl:sameAs <http://www.wikidata.org/entity/Q4583> ;
+    schema:isbn <urn:isbn:9780141439846> .
 
 <https://authorization-demo.redpencil.io/books/1c17e036d-f131-4038-9af7-58f6b9cf8dec> a schema:Book ;
     mu:uuid "1c17e036d-f131-4038-9af7-58f6b9cf8dec" ;
@@ -139,7 +155,8 @@
     dcterms:creator "Oscar Wilde" ;
     dcterms:issued "1890-06-20"^^xsd:date ;
     schema:genre "Philosophical fiction" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q173293> , <urn:isbn:9780141439570> .
+    owl:sameAs <http://www.wikidata.org/entity/Q173293> ;
+    schema:isbn <urn:isbn:9780141439570> .
 
 <https://authorization-demo.redpencil.io/books/11b16c09c-36d7-4cb8-825d-e38633c82457> a schema:Book ;
     mu:uuid "11b16c09c-36d7-4cb8-825d-e38633c82457" ;
@@ -147,7 +164,8 @@
     dcterms:creator "Homer" ;
     dcterms:issued "0008-01-01"^^xsd:date ;
     schema:genre "Epic poetry" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q462> , <urn:isbn:9780140268867> .
+    owl:sameAs <http://www.wikidata.org/entity/Q462> ;
+    schema:isbn <urn:isbn:9780140268867> .
 
 <https://authorization-demo.redpencil.io/books/14520e0fb-3c6d-4ddf-a1e5-e554423b95e7> a schema:Book ;
     mu:uuid "14520e0fb-3c6d-4ddf-a1e5-e554423b95e7" ;
@@ -155,7 +173,8 @@
     dcterms:creator "Miguel de Cervantes" ;
     dcterms:issued "1605-01-16"^^xsd:date ;
     schema:genre "Picaresque novel" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q1868> , <urn:isbn:9780060934347> .
+    owl:sameAs <http://www.wikidata.org/entity/Q1868> ;
+    schema:isbn <urn:isbn:9780060934347> .
 
 <https://authorization-demo.redpencil.io/books/228567a0a-86b9-4b8b-a2d8-3be5ae55538b> a schema:Book ;
     mu:uuid "228567a0a-86b9-4b8b-a2d8-3be5ae55538b" ;
@@ -163,4 +182,5 @@
     dcterms:creator "Dante Alighieri" ;
     dcterms:issued "1320-01-01"^^xsd:date ;
     schema:genre "Epic poetry, Allegory" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q4620> , <urn:isbn:9780140448955> .
+    owl:sameAs <http://www.wikidata.org/entity/Q4620> ;
+    schema:isbn <urn:isbn:9780140448955> .
