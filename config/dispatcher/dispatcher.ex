@@ -54,6 +54,15 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/users/"
   end
 
+  match "/memberships/*path", @json do
+    Proxy.forward conn, path, "http://resource/memberships/"
+  end
+
+
+  match "/organizations/*path", @json do
+    Proxy.forward conn, path, "http://resource/organizations/"
+  end
+
 
   ###############
   # SPARQL
