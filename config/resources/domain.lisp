@@ -28,8 +28,12 @@
   :resource-base (s-url "https://auth-demo.redpencil.io/users/")
   :properties `((:first-name :string ,(s-prefix "foaf:firstName"))
                 (:last-name :string ,(s-prefix "foaf:familyName")))
-  :has-many `((account :via ,(s-prefix "foaf:account")
-                       :as "account"))
+  :has-one `((account :via ,(s-prefix "foaf:account")
+                       :as "account")
+             (organization :via ,(s-prefix "org:member")
+                       :inverse t
+                       :as "organization"))
+  :features '(include-uri)
   :on-path "users")
 
 (define-resource account ()
@@ -40,7 +44,17 @@
   :has-one `((user :via ,(s-prefix "foaf:account")
                    :inverse t
                    :as "user"))
+  :features '(include-uri)
   :on-path "accounts")
+
+(define-resource organization ()
+  :class (s-prefix "org:Organization")
+  :resource-base (s-url "https://auth-demo.redpencil.io/organizations/")
+  :properties `((:name :string ,(s-prefix "skos:prefLabel")))
+  :has-many `((user :via ,(s-prefix "org:member")
+                       :as "members"))
+  :features '(include-uri)
+  :on-path "organizations")
 
 ;; reading in the domain.json
 (read-domain-file "domain.json")

@@ -9,11 +9,11 @@
 ;;;;;;;;;;;;;;;;;
 ;;; configuration
 (in-package :client)
-(setf *log-sparql-query-roundtrip* nil) ; change nil to t for logging requests to virtuoso (and the response)
+(setf *log-sparql-query-roundtrip* t) ; change nil to t for logging requests to virtuoso (and the response)
 (setf *backend* "http://triplestore:8890/sparql")
 
 (in-package :server)
-(setf *log-incoming-requests-p* nil) ; change nil to t for logging all incoming requests
+(setf *log-incoming-requests-p* t) ; change nil to t for logging all incoming requests
 
 ;;;;;;;;;;;;;;;;
 ;;; prefix types
@@ -106,11 +106,11 @@
 
 (supply-allowed-group "privatebooks"
   :query "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
-  PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
-          SELECT DISTINCT ?uuid WHERE {
-            <SESSION_ID> ext:belongsToCompany/mu:uuid ?uuid
-          }"
-  :parameters ("uuid"))
+PREFIX session: <http://mu.semte.ch/vocabularies/session/>
+          SELECT DISTINCT ?account WHERE {
+            <SESSION_ID>  session:account ?account .
+            ?account  ext:sessionRole <https://authorization-demo.redpencil.io/roles/32c2b6c3-4c99-462c-a145-083003eb95b5> .
+          }")
 
 (grant (read)
         :to-graph privatebooks
@@ -119,11 +119,11 @@
 
 (supply-allowed-group "favorites"
   :query "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
-  PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
-          SELECT DISTINCT ?uuid WHERE {
-            <SESSION_ID> ext:belongsToCompany/mu:uuid ?uuid
-          }"
-  :parameters ("uuid"))
+PREFIX session: <http://mu.semte.ch/vocabularies/session/>
+          SELECT DISTINCT ?account WHERE {
+            <SESSION_ID>  session:account ?account .
+            ?account  ext:sessionRole <https://authorization-demo.redpencil.io/roles/ed5396a4-2a1d-4624-8e79-df294843a0f8> .
+          }")
 
 (grant (read write)
         :to-graph favorites

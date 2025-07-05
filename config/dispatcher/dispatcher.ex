@@ -42,7 +42,11 @@ defmodule Dispatcher do
     forward conn, path, "http://login/sessions/"
   end
 
-  match "/mock/sessions/*path", @json do
+  post  "/mock/sessions/*path", @json do
+    forward conn, path, "http://login/sessions/"
+  end
+
+  get "/mock/sessions/*path" do
     forward conn, path, "http://login/sessions/"
   end
 
@@ -52,6 +56,15 @@ defmodule Dispatcher do
 
   match "/users/*path", @json do
     Proxy.forward conn, path, "http://resource/users/"
+  end
+
+  match "/memberships/*path", @json do
+    Proxy.forward conn, path, "http://resource/memberships/"
+  end
+
+
+  match "/organizations/*path", @json do
+    Proxy.forward conn, path, "http://resource/organizations/"
   end
 
 
