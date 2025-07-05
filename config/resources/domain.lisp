@@ -29,10 +29,10 @@
   :properties `((:first-name :string ,(s-prefix "foaf:firstName"))
                 (:last-name :string ,(s-prefix "foaf:familyName")))
   :has-one `((account :via ,(s-prefix "foaf:account")
-                       :as "account"))
-  :has-many `((membership :via ,(s-prefix "org:member")
+                       :as "account")
+             (organization :via ,(s-prefix "org:member")
                        :inverse t
-                       :as "memberships"))
+                       :as "organization"))
   :features '(include-uri)
   :on-path "users")
 
@@ -51,24 +51,10 @@
   :class (s-prefix "org:Organization")
   :resource-base (s-url "https://auth-demo.redpencil.io/organizations/")
   :properties `((:name :string ,(s-prefix "skos:prefLabel")))
-  :has-many `((membership :via ,(s-prefix "org:organization")
-                       :inverse t
-                       :as "memberships"))
+  :has-many `((user :via ,(s-prefix "org:member")
+                       :as "members"))
   :features '(include-uri)
   :on-path "organizations")
-
-(define-resource membership ()
-  :class (s-prefix "org:Membership")
-  :resource-base (s-url "https://auth-demo.redpencil.io/memberships/")
-  :properties `((:name :string ,(s-prefix "skos:prefLabel")))
-  :has-one `((user :via ,(s-prefix "org:member")
-                       :as "user")
-             (role :via ,(s-prefix "org:role")
-                       :as "role")
-             (organization :via ,(s-prefix "org:organization")
-                       :as "organization"))
-  :features '(include-uri)
-  :on-path "memberships")
 
 ;; reading in the domain.json
 (read-domain-file "domain.json")

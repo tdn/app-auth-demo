@@ -79,4 +79,4 @@ services:
   login:
     image: lblod/mock-login-service:0.7.0
     environment:
-      GROUP_TYPE: "https://www.w3.org/ns/org#Membership"
+      GROUP_TYPE: "http://www.w3.org/ns/org#Organization"
