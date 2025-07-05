@@ -62,7 +62,7 @@
             ; of the arrow
 
 ;; Example:
-(define-graph privatebooks ("http://mu.semte.ch/graphs/privatebooks/")
+(define-graph privatebooks ("http://mu.semte.ch/graphs/privatebooks")
   ("schema:Book"
    -> "schema:genre"
    -> "dct:creator"
