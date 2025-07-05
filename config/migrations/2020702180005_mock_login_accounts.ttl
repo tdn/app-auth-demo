@@ -40,7 +40,7 @@
     mu:uuid "7c1d567f-06ee-42df-818b-05b36c02e4d4" ;
     foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service> ;
     foaf:accountName "favorite-storing-user" ;
-    ext:sessionRole <https://authorization-demo.redpencil.io/roles/32c2b6c3-4c99-462c-a145-083003eb95b5> .
+    ext:sessionRole <https://authorization-demo.redpencil.io/roles/ed5396a4-2a1d-4624-8e79-df294843a0f8> .
 
 <https://authorization-demo.redpencil.io/roles/ed5396a4-2a1d-4624-8e79-df294843a0f8> a org:Role ;
     mu:uuid "ed5396a4-2a1d-4624-8e79-df294843a0f8" ;
