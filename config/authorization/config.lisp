@@ -70,10 +70,8 @@
    -> "owl:sameAs"))
 
 (define-graph favorites ("http://mu.semte.ch/graphs/favorites")
-  ("ext:Favorite"
-   -> "ext:book"
-   -> "rdf:type"
-   -> "mu:uuid"))
+  ("foaf:Person"
+   -> "ext:hasFavorite"))
 
 (define-graph system ("http://mu.semte.ch/graphs/system")
   ("foaf:Person"
@@ -126,8 +124,8 @@ PREFIX session: <http://mu.semte.ch/vocabularies/session/>
           }")
 
 (grant (read write)
-        :to-graph favorites
-        :for-allowed-group "favorites")
+       :to-graph favorites
+       :for-allowed-group "favorites")
 
 ;; (grant (read write)
 ;;        :to company

@@ -33,6 +33,8 @@
              (organization :via ,(s-prefix "org:member")
                        :inverse t
                        :as "organization"))
+  :has-many `((book :via ,(s-prefix "ext:hasFavorite")
+                    :as "favorites"))
   :features '(include-uri)
   :on-path "users")
 
