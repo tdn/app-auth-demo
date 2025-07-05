@@ -10,7 +10,8 @@
     dcterms:creator "Stephenie Meyer" ;
     dcterms:issued "2005-10-05"^^xsd:date ;
     schema:genre "Young adult fiction, Paranormal romance" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q104608> , <urn:isbn:9780316015844> .
+    owl:sameAs <http://www.wikidata.org/entity/Q104608> ;
+    schema:isbn <urn:isbn:9780316015844> .
 
 <https://authorization-demo.redpencil.io/a0d630d7-fd05-46c1-872b-33985acb6990> a schema:Book ;
     mu:uuid "a0d630d7-fd05-46c1-872b-33985acb6990" ;
@@ -18,7 +19,8 @@
     dcterms:creator "E. L. James" ;
     dcterms:issued "2011-05-25"^^xsd:date ;
     schema:genre "Erotic romance" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q240717> , <urn:isbn:9780345803481> .
+    owl:sameAs <http://www.wikidata.org/entity/Q240717> ;
+    schema:isbn <urn:isbn:9780345803481> .
 
 <https://authorization-demo.redpencil.io/8a633500-0498-40ac-b640-bbd9a7716ed0> a schema:Book ;
     mu:uuid "8a633500-0498-40ac-b640-bbd9a7716ed0" ;
@@ -26,7 +28,8 @@
     dcterms:creator "Dan Brown" ;
     dcterms:issued "2003-03-18"^^xsd:date ;
     schema:genre "Mystery, Thriller" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q183051> , <urn:isbn:9780385504201> .
+    owl:sameAs <http://www.wikidata.org/entity/Q183051> ;
+    schema:isbn <urn:isbn:9780385504201> .
 
 <https://authorization-demo.redpencil.io/a1f8452b-9c24-48b5-adf2-f2e0a855b003> a schema:Book ;
     mu:uuid "a1f8452b-9c24-48b5-adf2-f2e0a855b003" ;
@@ -34,7 +37,8 @@
     dcterms:creator "Sophie Kinsella" ;
     dcterms:issued "2000-09-01"^^xsd:date ;
     schema:genre "Chick lit, Comedy" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q5162838> , <urn:isbn:9780385335485> .
+    owl:sameAs <http://www.wikidata.org/entity/Q5162838> ;
+    schema:isbn <urn:isbn:9780385335485> .
 
 <https://authorization-demo.redpencil.io/41e13bab-e2d3-459e-8be1-64998849bdbe> a schema:Book ;
     mu:uuid "41e13bab-e2d3-459e-8be1-64998849bdbe" ;
@@ -42,4 +46,5 @@
     dcterms:creator "Nicholas Sparks" ;
     dcterms:issued "1996-10-01"^^xsd:date ;
     schema:genre "Romance" ;
-    owl:sameAs <http://www.wikidata.org/entity/Q1139973> , <urn:isbn:9780446605236> .
+    owl:sameAs <http://www.wikidata.org/entity/Q1139973> ;
+    schema:isbn <urn:isbn:9780446605236> .
